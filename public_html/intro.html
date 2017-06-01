@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="resources/css/newcss.css"/>
+        <script src="resources/js/newjavascript.js"></script>
+    </head>
+    <body>
+        <div ng-app="">
+            <div class="padrao">
+                <h1>AngularJS Extends HTML</h1>
+                <p>Name: <input type="text" ng-model="name"></p>
+                <h1>Hello {{name}}</h1>
+                <!--Abaixo outro jeito de se fazer o que foi feito acima-->
+                <p>RG: <input type="text" ng-model="rg"></p>
+                <p ng-bind="rg"></p>
+            </div>
+            <!--abaixo trabalhando com variáveis-->
+            <div ng-init="firstName = 'Tiago'" class="padrao">
+                <h1>AngularJS Directives</h1>
+                <p>The name is <span ng-bind="firstName"></span></p>
+            </div>
+
+            <!--Utilizando expression-->
+            <div class="padrao">
+                <h1>AngularJS Expressions</h1>
+                <p>Year of birthday: <input type="text" ng-model="nasc" ></p>
+                <p>Your age is:: {{2017 - nasc}}</p>
+            </div>
+            
+            <p>Clique <a href="modules.html">aqui</a> para AngularJS Applications
+        </div>        
+    </body>
+</html>

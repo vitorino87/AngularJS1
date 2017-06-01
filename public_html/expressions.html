@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <link rel="stylesheet" href="resources/css/newcss.css"/>
+    </head>
+    <body>
+        <div ng-app="" ng-init="myCol='lightblue'">
+            
+            <div class="padrao">
+                <h1>Using Background-color</h1>
+                <input style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}">
+            </div>
+            
+            
+            <div ng-init="person={firstName:'John',lastName:'Doe'}" class="padrao">
+                <h1>Using AngularJS Objects</h1>
+                <p>The name is <span ng-bind="person.lastName"></span></p>                
+            </div>
+            
+            <div ng-init="points=[1,2,3,4,5]" class="padrao">
+                <h1>Using AngularJS Arrays</h1>
+                <p>The third result is {{points[2]}}</p>
+            </div>
+        </div>
+    </body>
+</html>
