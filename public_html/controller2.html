@@ -10,16 +10,15 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-        <script src="resources/js/fullname.js"></script>
-        <script src="resources/js/controllerCountry.js"></script>
+        <script src="resources/js/controllerCountry.js"></script>        
     </head>
     <body>
-        <div ng-app="myApp4" ng-controller="personCtrl">
-            First Name: <input type="text" ng-model="firstName"><br>
-            Last Name: <input type="text" ng-model="lastName"><br><br>
-            <p>Full Name: {{fullName()}}</p>
-            <br><br>
-            <p>Click <a href="controller2.html">here</a> for another example</p>
-        </div>                
+        <div ng-app="myApp5" ng-controller="personCtrl2">
+            <ul>
+                <li ng-repeat="x in names">
+                    {{x.name + ', '+x.country}}
+                </li>
+            </ul>
+        </div>
     </body>
 </html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="resources/js/filters.js"></script>
+        <link rel="stylesheet" href="resources/css/newcss.css"/>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="personCtrl" class="padrao">
+            <p>The name is {{lastName| uppercase}}</p>        
+            <p>The name is {{lastName| lowercase}}</p>
+            <!--
+            AngularJS provides filters to transform data:
+    
+            currency    Format a number to a currency format.
+            date        Format a date to a specified format.
+            filter      Select a subset of items from an array.
+            json        Format an object to a JSON string.
+            limitTo     Limits an array/string, into a specified number of elements/characters.
+            lowercase   Format a string to lower case.
+            number      Format a number to a string.
+            orderBy     Orders an array by an expression.
+            uppercase   Format a string to upper case.
+            -->
+        </div>
+        
+        <div ng-controller="namesCtrl" class="padrao">
+            <ul>
+                <li ng-repeat="x in names | orderBy:'country'">
+                    {{x.name + ', '+ x.country}}
+                </li>
+            </ul>
+        </div>
+        
+        <div ng-controller="costCtrl" class="padrao">
+            <h1>Price: {{price | currency : "R$" : 4}}</h1>            
+        </div>
+        
+        <div ng-controller='filterCtrl' class='padrao'>
+            <ul>
+                <li ng-repeat="x in names | filter:'i'">
+                    {{x}}
+                </li>
+            </ul>
+        </div>
+        
+        <div ng-controller='filterCtrl2' class='padrao'>
+            <input type="text" ng-model='filtro'/>
+            <ul>
+                <li ng-repeat="x in names | filter: filtro">
+                    {{x}}
+                </li> 
+            </ul>
+        </div>
+        
+        <div ng-controller="filterCtrl3" class="padrao">
+            <table border="1" width="100%">
+                <tr>
+                    <th ng-click="orderByMe('name')"><a href="">Name</a></th>
+                    <th ng-click="orderByMe('country')"><a href="">Country</a></th>
+                </tr>
+                <tr ng-repeat="x in names | orderBy:myOrderBy">
+                    <td>{{x.name}}</td>
+                    <td>{{x.country}}</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div ng-controller='filterCtrl4' class='padrao'>
+            <ul>
+                <li ng-repeat='x in names'>
+                    {{x | myFormat}}
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
