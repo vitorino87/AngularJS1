@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05/06/2017, 17:48:12
+    Author     : tiago.lucas
+*/
+
+div{
+    transition: all linear 0.5s;
+    background-color: lightblue;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.ng-hide{
+    height: 0;
+    width: 0;
+    background-color: transparent;
+    top: -200px;
+    left: 200px;
+}

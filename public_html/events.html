@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js'></script>
+        <link rel='stylesheet' href='resources/css/newcss.css'/>
+        <script src="resources/js/events.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <!--
+        You can add AngularJS event listeners to your HTML elements by using one or more of these directives:
+
+            ng-blur
+            ng-change
+            ng-click
+            ng-copy
+            ng-cut
+            ng-dblclick
+            ng-focus
+            ng-keydown
+            ng-keypress
+            ng-keyup
+            ng-mousedown
+            ng-mouseenter
+            ng-mouseleave
+            ng-mousemove
+            ng-mouseover
+            ng-mouseup
+            ng-paste
+
+        -->
+        <div class="padrao">
+            <h1 ng-mousemove="count = count + 1">Mouse over me!</h1>
+            <h2>{{count}}</h2>
+        </div>
+        <div class='padrao'>
+            <button ng-click='count = count + 1'>Click me!</button>
+            <p>{{count}}</p>
+        </div>
+        <div class='padrao' ng-controller='toggleCtrl'>
+            <button ng-click='myFunc()'>Click Me</button>
+            <div ng-show="showMe">
+                <h1>Menu:</h1>
+                <div>Pizza</div>
+                <div>Pasta</div>
+                <div>Pesce</div>
+            </div>            
+        </div>
+        <div class="padrao" ng-controller="coordinatesCtrl">
+            <h1 ng-mousemove="myFunc($event)">Mouser Over Me!</h1>
+            <p>Coordinates:{{x + ', '+y}}</p>
+        </div>
+        
+    </body>
+</html>
