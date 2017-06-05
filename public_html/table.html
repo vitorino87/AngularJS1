@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="resources/js/table.js"></script>
+        <link rel="stylesheet" href="resources/css/table.css"/>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="tableCtrl1">
+            <table>
+                <tr>
+                    <th></th>
+                    <th ng-click="orderByMe('Name')"><a href="">Name</a></th>
+                    <th ng-click="orderByMe('Country')"><a href="">Country</a></th>
+                </tr>
+                <tr ng-repeat="x in names | orderBy:myOrderBy">
+                    <td>{{$index + 1}}</td>
+                    <td>{{x.Name}}</td>
+                    <td>{{x.Country}}</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

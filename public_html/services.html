@@ -27,5 +27,26 @@ and open the template in the editor.
             </h1>
         </div>
         
+        <div ng-controller="timeService" class="padrao">
+            <p>This header will change after two seconds:</p>
+            <h1>{{myHeader}}</h1>
+        </div>
+        
+        <div ng-controller="hourService" class="padrao">
+            <p>The time is:</p>
+            <h1>{{theTime}}</h1>
+        </div>
+        
+        <div ng-controller="customizedService" class="padrao">
+            <p>The hexadecimal value of 255 is:</p>
+            <h1>{{hex}}</h1>
+        </div>
+        
+        <div ng-controller="customizedService2" class="padrao">
+            <p>Use a filter when displaying the array [255, 251, 200]:</p>
+            <ul>
+                <li ng-repeat="x in counts">{{x | myFormat}}</li>
+            </ul>
+        </div>
     </body>
 </html>
