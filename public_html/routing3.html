@@ -11,20 +11,16 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js'></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-        <script src='resources/js/routing2.js'></script>
+        <script src='resources/js/routing3.js'></script>
     </head>
-    <body ng-app='myApp'>          
-            <p><a href="#/!">Main</a></p>
-
-            <a href="#!london">City 1</a>
-            <a href="#!paris">City 2</a>
-
-            <p>Click on the links.</p>
-
-            <p>Note that each "view" has its own controller which each gives the "msg" variable a value.</p>
-
-            <div ng-view></div>
-            
-            <p>Click <a href="routing3.html">here</a> for another example</p>
+    <body ng-app="myApp">
+        <p><a href="#/">Main</a></p>
+        <a href="#!banana">Banana</a>
+        <a href="#!tomato">Tomato</a>
+        <p>Click on the links to change the content.</p>
+        <p>The HTML shown in the ng-view directive are written
+        in the template property of the $routeProvider.when method.</p>
+        <div ng-view></div>
+        <p>Click <a href="routing4.html">here</a> for another example</p>
     </body>
 </html>
